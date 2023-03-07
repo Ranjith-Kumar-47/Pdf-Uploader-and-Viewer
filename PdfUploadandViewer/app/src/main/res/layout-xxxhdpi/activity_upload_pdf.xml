@@ -7,6 +7,7 @@
     tools:context=".UploadPdf">
 
 
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
@@ -17,12 +18,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
@@ -38,8 +42,8 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/materialCardView"
-                android:layout_width="250dp"
-                android:layout_height="180dp"
+                android:layout_width="220dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:clickable="true"
@@ -101,12 +105,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="20dp"
                 android:hint="Title"
-                app:boxStrokeColor="@color/blue"
-                app:hintTextColor="?attr/colorPrimary"
+                app:boxStrokeColor="@color/black"
                 android:textColorHint="@color/black"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
@@ -121,6 +124,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextTitle"
                     android:textColor="@color/black"
+                    android:textColorHint="#494848"
                     android:drawableTint="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -137,13 +141,12 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="#DCF4FA"
-                app:boxStrokeColor="@color/blue"
-                app:hintTextColor="?attr/colorPrimary"
-                android:textColorHint="@color/black"
                 android:hint="Discription"
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusBottomStart="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
+                app:boxStrokeColor="@color/black"
+                android:textColorHint="@color/black"
                 app:boxCornerRadiusTopStart="10dp"
                 app:boxStrokeWidth="1.3dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -155,6 +158,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:textColor="@color/black"
+                    android:textColorHint="#494848"
                     android:drawableTint="@color/black"
                     android:backgroundTint="#DCF4FA"
                     android:inputType="textMultiLine"
@@ -178,6 +182,7 @@
 
         </LinearLayout>
         </ScrollView>
+
 
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

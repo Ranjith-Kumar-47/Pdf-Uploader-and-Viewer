@@ -37,20 +37,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Objects.requireNonNull(getSupportActionBar()).setTitle("Uploaded PDF's");
         DrawerLayout drawerLayout = findViewById(R.id.my_drawer_layout);
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
         FloatingActionButton floatingButton = findViewById(R.id.floatingButton);
         ProgressBar progressBar = findViewById(R.id.progressBar);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         Dialog dialog = new Dialog(this);
-        navigationView = findViewById(R.id.navigationBar);
-        navigationView.setNavigationItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.rate_app)
-                Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_SHORT).show();
-            if (item.getItemId() == R.id.share)
-                Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_SHORT).show();
-            return true;
-        });
 
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
+        navigationView = findViewById(R.id.navigationBar);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.share){
+                    drawerLayout.close();
+                    Toast.makeText(MainActivity.this, "Share Button is clicked", Toast.LENGTH_SHORT).show();
+                }
+                if (item.getItemId() == R.id.rate_app){
+                    drawerLayout.close();
+                    Toast.makeText(MainActivity.this, "Rate app Button is clicked", Toast.LENGTH_SHORT).show();}
+                return true;
+            }
+        });
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);

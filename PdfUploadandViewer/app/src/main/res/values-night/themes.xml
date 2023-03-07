@@ -16,8 +16,8 @@
 
     <style name="theme1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#EC407A</item>
-        <item name="colorPrimaryVariant">#EC407A</item>
+        <item name="colorPrimary">#29C263</item>
+        <item name="colorPrimaryVariant">#29C263</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
